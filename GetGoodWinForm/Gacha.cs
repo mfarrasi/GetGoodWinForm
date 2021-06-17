@@ -16,8 +16,8 @@ namespace GetGoodWinForm
         {
             Random random = new Random();
             Console.WriteLine(random.Next());
-            Console.WriteLine(random.Next(10));
-            Console.WriteLine(random.Next(0, 10));
+            Console.WriteLine(random.Next(5));
+            Console.WriteLine(random.Next(0, 5));
         }
         public bool seeRates(bool showRates)
         {

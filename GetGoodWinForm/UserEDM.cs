@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace GetGoodWinForm
 {
-    public partial class PointsEDM : DbContext
+    public partial class UserEDM : DbContext
     {
-        public PointsEDM()
-            : base("name=Model1")
+        public UserEDM()
+            : base("name=UserEDM")
         {
         }
 

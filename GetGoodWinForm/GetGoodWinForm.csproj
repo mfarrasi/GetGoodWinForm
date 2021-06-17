@@ -54,6 +54,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Gma.System.MouseKeyHook, Version=5.6.130.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MouseKeyHook.5.6.0\lib\net40\Gma.System.MouseKeyHook.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -77,10 +80,14 @@
     <Compile Include="distribution.cs" />
     <Compile Include="filegroup.cs" />
     <Compile Include="Gacha.cs" />
-    <Compile Include="PointsEDM.cs" />
     <Compile Include="node.cs" />
     <Compile Include="pdw_sp_configure.cs" />
     <Compile Include="sysdiagram.cs" />
+    <Compile Include="UserDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserInfo.cs" />
     <Compile Include="Timer.cs" />
     <Compile Include="Form1.cs">
@@ -91,6 +98,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserEDM.cs" />
     <Compile Include="version_history.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -114,17 +122,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UserDBDataSet.xsc">
+      <DependentUpon>UserDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDBDataSet.xss">
+      <DependentUpon>UserDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="UserPoints.mdf">
+    <Content Include="UserDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UserPoints_log.ldf">
+    <Content Include="UserDB_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>UserPoints.mdf</DependentUpon>
+      <DependentUpon>UserDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

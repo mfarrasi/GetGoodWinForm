@@ -16,25 +16,34 @@ namespace GetGoodWinForm
         }
         public void getPoint(int points)
         {
-
+            
         }
         private bool hasCharacter()
         {
             bool dragon = true;
             bool dog = true;
             bool cat = true;
-            if (dragon == true && dog == true && cat == true)
-            {
-                return true;
-            }
+            bool golem = true;
+            bool anakMiskin = true;
+            if (dragon == true)
+                return dragon;
+            else if (dog == true)
+                return dog;
+            else if (cat == true)
+                return cat;
+            else if (golem == true)
+                return golem;
+            else if (anakMiskin == true)
+                return anakMiskin;
             else
-            {
                 return false;
+            {
+
             }
         }
         public void showCharacter()
         {
-
+            
         }
     }
 }

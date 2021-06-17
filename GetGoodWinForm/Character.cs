@@ -14,10 +14,5 @@ namespace GetGoodWinForm
             return move;
         }
         
-        public bool jump()
-        {
-            bool isJump = true;
-            return isJump;
-        }
     }
 }

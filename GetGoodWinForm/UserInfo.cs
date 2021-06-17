@@ -12,6 +12,16 @@ namespace GetGoodWinForm
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
-        public int? Points { get; set; }
+        public int Point { get; set; }
+
+        public bool Dragon { get; set; }
+
+        public bool Cat { get; set; }
+
+        public bool Dog { get; set; }
+
+        public bool Golem { get; set; }
+
+        public bool AnakMiskin { get; set; }
     }
 }
